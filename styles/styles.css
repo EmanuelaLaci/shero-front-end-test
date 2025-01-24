@@ -1,4 +1,3 @@
-/* Global Styles */
 * {
     margin: 0;
     padding: 0;
@@ -11,174 +10,121 @@ body {
     line-height: 1.6;
 }
 
-/* Promotion Banner */
+a {
+    text-decoration: none;
+    color: #333;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #007BFF;
+}
+
 .promotion-banner {
     text-align: center;
-    background-color: #000; /* Black background */
-    color: #fff; /* White text */
+    background-color: #000;
+    color: #fff;
     font-size: 14px;
     padding: 5px 0;
-    border-bottom: 1px solid #ddd; /* Subtle separator line */
+    border-bottom: 1px solid #ddd;
     text-transform: uppercase;
-    margin-bottom: 0; /* Remove gap below banner */
+    margin-bottom: 0;
 }
 
-/* Top Bar */
 .top-bar {
     display: flex;
-    justify-content: space-between; /* Space between left and right sections */
+    justify-content: space-between;
     align-items: center;
-    background-color: #fff; /* White background */
+    background-color: #fff;
     padding: 10px 40px;
     font-size: 14px;
-    color: #333; /* Dark text color */
-    text-transform: uppercase; /* Uniform style */
-    font-weight: bold; /* Bold text */
-    border-bottom: 2px solid #ddd; /* Light grey underline for separation */
+    text-transform: uppercase;
+    font-weight: bold;
+    border-bottom: 2px solid #ddd;
 }
 
-/* Top Bar Left Section */
-.top-bar-left {
-    display: flex;
-    gap: 20px; /* Spacing between links */
-    align-items: center;
-}
-
-/* Top Bar Right Section */
+.top-bar-left,
 .top-bar-right {
     display: flex;
-    gap: 20px; /* Spacing between links */
+    gap: 20px;
     align-items: center;
 }
 
-/* Top Bar Links */
 .top-bar a {
-    text-decoration: none;
-    color: #333; /* Dark text */
-    transition: color 0.3s ease;
     display: flex;
-    align-items: center; /* Align icon and text vertically */
-}
-
-.top-bar a:hover {
-    color: #007BFF; /* Blue hover effect */
-}
-
-/* Store Locator Icon */
-.store-locator-icon {
-    margin-right: 5px; /* Space between the icon and the text */
-    margin-left: 0; /* Remove left margin */
-    width: 14px; /* Adjust icon size */
-    height: auto; /* Maintain aspect ratio */
-    order: -1; /* Move the icon to the left */
-}
-
-/* Ensure alignment */
-.top-bar-left {
-    display: flex;
-    gap: 10px; /* Adjust gap between links and icons */
     align-items: center;
 }
 
+.store-locator-icon {
+    margin-right: 5px;
+    width: 14px;
+    height: auto;
+    order: -1;
+}
 
-/* Main Header */
 .logo-nav-container {
     display: flex;
-    justify-content: flex-start; /* Align logo to the left */
-    align-items: center; /* Center items vertically */
+    justify-content: flex-start;
+    align-items: center;
     padding: 20px 40px;
-    background-color: #fff; /* White background */
-    border-bottom: 2px solid #ddd; /* Light grey underline */
+    background-color: #fff;
+    border-bottom: 2px solid #ddd;
 }
 
-/* Logo Styling */
 .logo {
-    margin-right: auto; /* Push logo to the far left */
+    margin-right: auto;
 }
 
-/* Navigation */
 nav {
     display: flex;
-    justify-content: center; /* Center navigation links */
-    flex-grow: 1; /* Allow navigation to take up remaining space */
+    justify-content: center;
+    flex-grow: 1;
 }
 
-/* Navigation List */
 nav ul {
     list-style: none;
     display: flex;
-    gap: 30px; /* Space between navigation links */
+    gap: 30px;
     margin: 0;
     padding: 0;
 }
 
-/* Navigation Links */
 nav a {
-    text-decoration: none;
-    color: #333;
     font-weight: bold;
     font-size: 16px;
-    transition: color 0.3s ease;
-}
-
-nav a:hover {
-    color: #007BFF; /* Blue hover */
 }
 
 nav a::after {
-    content: " ▼"; /* Dropdown indicator */
+    content: " ▼";
     font-size: 12px;
     margin-left: 5px;
     color: inherit;
 }
 
-nav .dropdown:hover a {
-    color: #007BFF; /* Highlight when dropdown is active */
-}
-
-/* User Links */
 .user-links {
     display: flex;
     gap: 20px;
     align-items: center;
-    font-weight: bold; /* Bold text */
+    font-weight: bold;
 }
 
-.user-links a {
-    text-decoration: none;
-    color: #333;
-    font-size: 14px;
-    transition: color 0.3s ease;
-}
-
-.user-links a:hover {
-    color: #007BFF;
-}
-
-/* Optional Search Icon */
 .search-icon {
     margin-left: 15px;
     cursor: pointer;
     font-size: 16px;
-    color: #333;
-    font-weight: bold; /* Bold the search icon */
+    font-weight: bold;
 }
 
-.search-icon:hover {
-    color: #007BFF;
-}
-
-/* Responsive Layout for Header (Mobile) */
 @media (max-width: 768px) {
     .logo-nav-container {
-        flex-direction: column; /* Stack the logo and navigation */
+        flex-direction: column;
         align-items: center;
-        padding: 20px; /* Reduce padding */
+        padding: 20px;
     }
 
     nav ul {
         flex-direction: column;
-        gap: 10px; /* Reduce spacing */
+        gap: 10px;
     }
 
     .user-links {
@@ -186,8 +132,6 @@ nav .dropdown:hover a {
     }
 }
 
-
-/* Hero Section */
 .hero {
     position: relative;
     height: 600px;
@@ -198,16 +142,6 @@ nav .dropdown:hover a {
     text-align: left;
     color: #fff;
 }
-
-/* Updated Alignment */
-.promotion-banner + .top-bar {
-    border-bottom: 2px solid #007BFF; /* Ensure clear separation between sections */
-}
-
-.top-bar + .logo-nav-container {
-    margin-top: 0; /* Seamless transition */
-}
-
 
 .hero-image {
     position: absolute;
@@ -230,19 +164,16 @@ nav .dropdown:hover a {
 .hero-content h2 {
     font-size: 48px;
     font-weight: 600;
-    color: #ffffff;
     line-height: 1.2;
     margin-bottom: 20px;
 }
 
-/* Buttons */
-.btn-primary {
+.btn-primary,.btn-secondary {
     background-color: transparent;
     color: #fff;
     border: 2px solid #fff;
-    padding: 10px 30px;
+    padding: 10px 20px;
     font-size: 16px;
-    font-weight: bold;
     text-transform: uppercase;
     cursor: pointer;
     transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
@@ -254,64 +185,54 @@ nav .dropdown:hover a {
     transform: scale(1.1);
 }
 
-.btn-secondary {
-    background-color: transparent;
-    color: #fff;
-    border: 2px solid #fff;
-    padding: 10px 20px;
-    font-size: 16px;
-    text-transform: uppercase;
-    cursor: pointer;
-    transition: background-color 0.3s ease, color 0.3s ease;
-}
-
 .btn-secondary:hover {
     background-color: #fff;
     color: #000;
 }
 
-/* Grid Layouts */
 .image-grid-wrapper {
     position: relative;
     display: flex;
-    justify-content: center; /* Center the grid content */
+    justify-content: space-around;
     align-items: center;
-    margin: 40px auto; /* Maintain separation between sections */
+    margin: 40px auto;
     padding: 0;
-    overflow: hidden; /* Prevent images from overflowing */
+    overflow: hidden;
 }
 
-/* Side Images */
 .side-image {
     position: absolute;
     width: auto;
-    height: 100%; /* Stretch images to the full height of the grid */
-    object-fit: cover; /* Maintain aspect ratio */
-    z-index: -1; /* Ensure it stays in the background */
+    height: 300px;
+    object-fit: cover;
+    z-index: -1;
+    top: 0;
 }
 
 .side-left {
-    left: 0; /* Position the left image */
+    left: 0;
 }
 
 .side-right {
-    right: 0; /* Position the right image */
+    right: 0;
 }
 
-/* Updated Grid Layout */
 .image-grid {
-    position: relative; /* Ensure grid content appears above side images */
+    position: relative;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 20px; /* Add space between grid items */
-    z-index: 1; /* Bring the grid content above the side images */
+    gap: 40px;
+    z-index: 1;
     text-align: center;
-    width: 80%; /* Keep grid content centered and narrower */
-    margin: 0 auto; /* Center the grid horizontally */
+    width: 90%;
+    margin: 0 auto;
 }
+
 .image-grid .grid-item img {
     width: 100%;
-    border-radius: 8px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 0;
 }
 
 .image-grid .grid-item p {
@@ -319,67 +240,59 @@ nav .dropdown:hover a {
     font-weight: bold;
     font-size: 16px;
 }
-
-/* Store Locator Section */
 .store-locator {
     display: flex;
     justify-content: space-between;
     align-items: center;
     background-color: #000;
     color: #fff;
-    padding: 40px;
     margin-bottom: 40px;
 }
 
 .locator-content {
     flex: 1;
-    padding-right: 20px;
-    text-align: left; /* Align content to the left */
+    padding: 100px;
+    text-align: left;
 }
 
 .locator-content h2 {
-    font-size: 32px; /* Slightly larger font */
+    font-size: 32px;
     font-weight: bold;
     margin-bottom: 15px;
-    color: #fff; /* Ensure text is visible on black background */
 }
 
 .locator-content p {
     font-size: 18px;
     margin-bottom: 20px;
-    line-height: 1.6; /* Improve readability */
-    color: #fff; /* Ensure text visibility */
+    line-height: 1.6;
 }
 
 .locator-map {
     flex: 1;
     position: relative;
     display: flex;
-    justify-content: center; /* Centers the map horizontally */
-    align-items: center; /* Centers the map vertically */
-    background-color: #fff; /* White background for the map section */
-    height: 500px; /* Adjust height for better proportions */
-    overflow: hidden; /* Ensure no overflow from images */
-    border-radius: 8px; /* Optional: Add rounded corners for a softer look */
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    height: 100%;
+    overflow: hidden;
+    padding: 120px;
 }
 
 .base-map {
     width: 100%;
-    height: 100%; /* Ensure it spans the entire container */
-    object-fit: cover; /* Maintain aspect ratio */
-    position: absolute; /* Stays in the background */
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
 }
 
 .overlay-image {
-    position: relative; /* Adjust overlay position naturally */
-    width: auto;
-    height: auto;
-    max-width: 90%; /* Ensure it doesn't exceed container width */
-    max-height: 90%; /* Ensure it fits nicely in the container */
-    z-index: 2; /* Ensure it's above the base map */
-    margin: auto;
+    position: relative;
+    width: 150%;
+    height: 150%;
+    z-index: 2;
 }
-/* Products Section */
+
 .products {
     padding: 40px 20px;
     text-align: center;
@@ -393,14 +306,14 @@ nav .dropdown:hover a {
 
 .product-grid {
     display: flex;
-    gap: 20px; /* Space between products */
+    gap: 20px;
     transition: transform 0.5s ease-in-out;
     overflow: hidden;
     scroll-behavior: smooth;
 }
 
 .product {
-    flex: 0 0 calc(25% - 20px); /* 4 products on desktop */
+    flex: 0 0 calc(25% - 20px);
 }
 
 .product img {
@@ -423,20 +336,18 @@ nav .dropdown:hover a {
     text-align: center;
 }
 
-/* Responsive Layout */
 @media (max-width: 1024px) {
     .product {
-        flex: 0 0 calc(50% - 20px); /* 2 products on tablet */
+        flex: 0 0 calc(50% - 20px);
     }
 }
 
 @media (max-width: 768px) {
     .product {
-        flex: 0 0 100%; /* 1 product on mobile */
+        flex: 0 0 100%;
     }
 }
 
-/* Testimonial Section */
 .testimonial {
     text-align: center;
     background-color: #f9f9f9;
@@ -475,7 +386,6 @@ nav .dropdown:hover a {
     font-size: 16px;
 }
 
-/* Footer */
 footer {
     background-color: #f8f8f8;
     color: #333;
@@ -521,9 +431,6 @@ footer {
 }
 
 .footer-column ul li a {
-    text-decoration: none;
-    color: #333;
-    transition: color 0.3s ease;
     font-size: 14px;
 }
 
